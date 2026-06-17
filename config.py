@@ -17,7 +17,10 @@ class Config:
         "CHROMA_PERSIST_DIR",
         "./data/chroma_db"
     )
-
+    CHROMA_COLLECTION_NAME = os.getenv(
+    "CHROMA_COLLECTION_NAME",
+    "research_papers"
+)
     EMBEDDING_MODEL = os.getenv(
         "EMBEDDING_MODEL",
         "BAAI/bge-small-en-v1.5"
