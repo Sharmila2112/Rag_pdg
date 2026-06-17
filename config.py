@@ -41,7 +41,9 @@ class Config:
     CHUNK_OVERLAP = int(
         os.getenv("CHUNK_OVERLAP", "200")
     )
-
+    MAX_OUTPUT_TOKENS = int(
+    os.getenv("MAX_OUTPUT_TOKENS", "2048")
+)
     TOP_K_RESULTS = int(
         os.getenv("TOP_K_RESULTS", "5")
     )
