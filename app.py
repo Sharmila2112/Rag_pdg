@@ -51,17 +51,16 @@ if CONFIG_OK:
         cleanup_temp_files,
         display_sources,
         paper_selector_widget,
-        init_session_defaults,
     )
 
 # ---------------------------------------------------------------------------
 # Session state initialisation
 # ---------------------------------------------------------------------------
-init_session_defaults({
-    "uploaded_papers": {},    # filename -> title
-    "processing_log": [],
-})
+if "uploaded_papers" not in st.session_state:
+    st.session_state["uploaded_papers"] = {}
 
+if "processing_log" not in st.session_state:
+    st.session_state["processing_log"] = []
 
 # ===========================================================================
 # Sidebar: PDF Upload & Paper Management
