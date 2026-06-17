@@ -12,6 +12,8 @@ import traceback
 
 import streamlit as st
 
+st.write("Secret exists:", "GOOGLE_API_KEY" in st.secrets)
+
 # ---------------------------------------------------------------------------
 # Page config (must be first Streamlit call)
 # ---------------------------------------------------------------------------
