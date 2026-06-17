@@ -25,12 +25,15 @@ class Config:
         "EMBEDDING_MODEL",
         "BAAI/bge-small-en-v1.5"
     )
+    TEMPERATURE = float(
+    os.getenv("TEMPERATURE", "0.2")
+)
 
     GEMINI_MODEL = os.getenv(
         "GEMINI_MODEL",
         "gemini-2.0-flash"
     )
-
+    
     CHUNK_SIZE = int(
         os.getenv("CHUNK_SIZE", "1000")
     )
